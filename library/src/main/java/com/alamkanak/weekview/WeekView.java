@@ -1102,11 +1102,7 @@ public class WeekView extends View {
 
 
         // Calculate left and right position for all the events.
-        // Get the maxRowCount by looking in all columns.
-        int maxRowCount = 0;
-        for (List<EventRect> column : columns){
-            maxRowCount = Math.max(maxRowCount, column.size());
-        }
+        int maxRowCount = columns.get(0).size();
         for (int i = 0; i < maxRowCount; i++) {
             // Set the left and right values of the event.
             float j = 0;
